@@ -1,6 +1,7 @@
 var Promise = require('bluebird');
 var Stream = require('bufferedstream');
 var getByteLength = require('./getByteLength');
+var MaxLengthExceededError = require('./../errors/MaxLengthExceededError');
 
 // TODO: Refactor to eliminate this circular dependency:
 // Message => parseMultipart => Parser => Part => Message
