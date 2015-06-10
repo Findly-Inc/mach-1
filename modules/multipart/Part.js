@@ -38,7 +38,7 @@ Part.prototype = Object.create(Message.prototype, {
 
       var filename;
       if (match) {
-        filename = decodeURIComponent(match[1].replace(/\\"/g, '"'));
+        filename = decodeURIComponent(unescape(match[1].replace(/\\"/g, '"'));
       } else {
         // Match unquoted filename.
         match = contentDisposition.match(/filename=([^;]+)/i);
